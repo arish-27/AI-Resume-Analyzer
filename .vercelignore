@@ -1,0 +1,10 @@
+resume-iq/
+.git/
+*.md
+*.txt
+verify_skills.py
+verify_skills_quick.py
+TESTING_GUIDE.md
+FIXES_APPLIED.md
+REGEX_ERROR_FIX.md
+TEST_INSTRUCTIONS.md
