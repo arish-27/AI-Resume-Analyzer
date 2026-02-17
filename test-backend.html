@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Backend Test</title>
+</head>
+<body>
+    <h1>Backend Connection Test</h1>
+    <input type="file" id="fileInput" accept=".pdf,.docx,.txt">
+    <button onclick="testUpload()">Test Upload</button>
+    <div id="result"></div>
+
+    <script>
+        async function testUpload() {
+            const fileInput = document.getElementById('fileInput');
+            const resultDiv = document.getElementById('result');
+            
+            if (!fileInput.files[0]) {
+                resultDiv.innerHTML = '<p style="color: red;">Please select a file first!</p>';
+                return;
+            }
+
+            resultDiv.innerHTML = '<p>Testing backend connection...</p>';
+            
+            try {
+                const formData = new FormData();
+                formData.append('resume', fileInput.files[0]);
+
+                console.log('Sending request to backend...');
+                const response = await fetch('http://localhost:5000/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                console.log('Response status:', response.status);
+                const data = await response.json();
+                console.log('Response data:', data);
+
+                if (response.ok) {
+                    resultDiv.innerHTML = `
+                        <h2 style="color: green;">✅ Backend Working!</h2>
+                        <p><strong>Status:</strong> ${data.status}</p>
+                        <p><strong>Questions:</strong> ${data.questions?.length || 0}</p>
+                        <p><strong>Skills:</strong> ${data.skills?.length || 0}</p>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `
+                        <h2 style="color: orange;">⚠️ Backend Error</h2>
+                        <p><strong>Status:</strong> ${response.status}</p>
+                        <p><strong>Error:</strong> ${data.error || 'Unknown error'}</p>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                resultDiv.innerHTML = `
+                    <h2 style="color: red;">❌ Connection Failed</h2>
+                    <p><strong>Error:</strong> ${error.message}</p>
+                    <p>Make sure the backend is running on port 5000</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

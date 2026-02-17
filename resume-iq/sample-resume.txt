@@ -1,0 +1,31 @@
+Sarah Johnson
+Senior Full Stack Developer
+
+PROFESSIONAL EXPERIENCE:
+Software Engineer at TechCorp (2020-2024)
+- Led development of e-commerce platform using React and Node.js
+- Implemented microservices architecture with Docker and Kubernetes
+- Managed team of 4 junior developers
+- Reduced application load time by 40% through optimization
+
+Backend Developer at StartupXYZ (2018-2020)
+- Built REST APIs using Python Django framework
+- Designed database schemas for PostgreSQL
+- Integrated payment systems with Stripe API
+- Worked in agile development environment
+
+TECHNICAL SKILLS:
+- Frontend: React, JavaScript, TypeScript, HTML5, CSS3
+- Backend: Node.js, Python, Django, Express.js
+- Databases: PostgreSQL, MongoDB, Redis
+- Cloud: AWS (EC2, S3, Lambda), Docker, Kubernetes
+- Tools: Git, Jenkins, Jira, Slack
+
+EDUCATION:
+Bachelor of Science in Computer Science
+University of Technology (2014-2018)
+
+PROJECTS:
+- E-commerce Platform: Full-stack application serving 10,000+ users
+- Task Management System: React-based project management tool
+- API Gateway: Microservices orchestration using Node.js

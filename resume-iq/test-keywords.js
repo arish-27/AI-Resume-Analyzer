@@ -1,0 +1,28 @@
+// Quick test to verify keyword extraction
+import { generateQuestions } from './src/utils/questionGenerator.js';
+
+const testResume = `
+John Doe
+Software Engineer
+
+EXPERIENCE:
+- 3 years experience with React and JavaScript
+- Python backend development
+- Java enterprise applications
+- Project management and team leadership
+
+SKILLS:
+- JavaScript, React, Node.js
+- Python, Django, Flask
+- Java, Spring Boot
+- SQL, MongoDB
+- Git, Docker, AWS
+
+EDUCATION:
+Computer Science Degree
+`;
+
+console.log("Testing keyword extraction...");
+generateQuestions(testResume).then(questions => {
+    console.log("Generated questions:", questions);
+});

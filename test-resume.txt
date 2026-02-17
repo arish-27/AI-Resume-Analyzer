@@ -1,0 +1,17 @@
+PROFESSIONAL RESUME
+
+John Doe
+Software Engineer
+
+SKILLS:
+- Python
+- JavaScript
+- React
+- Machine Learning
+- Data Analysis
+
+EXPERIENCE:
+Senior Software Engineer at Tech Corp
+- Built web applications using React and Node.js
+- Implemented machine learning models
+- Worked on data pipelines
