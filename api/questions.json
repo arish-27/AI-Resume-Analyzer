@@ -1,0 +1,689 @@
+{
+    "python": [
+        "Can you explain the difference between list and tuple in Python?",
+        "How does memory management work in Python?",
+        "What are decorators and how have you used them?",
+        "Explain the concept of PEP 8 and why it is important.",
+        "How do you handle exceptions in Python?"
+    ],
+    "java": [
+        "What is the difference between JDK, JRE, and JVM?",
+        "Explain the concept of OOPs in Java.",
+        "What is the difference between an interface and an abstract class?",
+        "How does Garbage Collection work in Java?",
+        "What is the purpose of the 'static' keyword?"
+    ],
+    "javascript": [
+        "Explain closure in JavaScript.",
+        "What is the difference between '==' and '==='?",
+        "How does the Event Loop work?",
+        "What are Promises and how do you use them?",
+        "Explain the difference between var, let, and const."
+    ],
+    "typescript": [
+        "What are the benefits of using TypeScript over JavaScript?",
+        "Explain the difference between 'interface' and 'type' in TypeScript.",
+        "How do generics work in TypeScript?",
+        "What are decorators in TypeScript?",
+        "How do you handle null and undefined in TypeScript?"
+    ],
+    "c++": [
+        "What is the difference between stack and heap memory?",
+        "Explain pointers and references in C++.",
+        "What is RAII and why is it important?",
+        "Explain virtual functions and polymorphism.",
+        "What are smart pointers and when would you use them?"
+    ],
+    "c#": [
+        "What is the difference between 'ref' and 'out' parameters?",
+        "Explain the concept of delegates and events.",
+        "What is LINQ and how have you used it?",
+        "What is the difference between abstract class and interface in C#?",
+        "Explain async/await in C#."
+    ],
+    "go": [
+        "What are goroutines and how do they differ from threads?",
+        "Explain channels in Go.",
+        "What is the purpose of defer in Go?",
+        "How does error handling work in Go?",
+        "What are interfaces in Go and how are they different from other languages?"
+    ],
+    "rust": [
+        "Explain ownership and borrowing in Rust.",
+        "What is the difference between String and &str?",
+        "How does Rust ensure memory safety without garbage collection?",
+        "What are lifetimes in Rust?",
+        "Explain the Result and Option types."
+    ],
+    "ruby": [
+        "What is the difference between blocks, procs, and lambdas?",
+        "Explain the Ruby object model.",
+        "What are mixins in Ruby?",
+        "How does Ruby handle metaprogramming?",
+        "What is the difference between symbols and strings?"
+    ],
+    "php": [
+        "What is the difference between include and require?",
+        "Explain namespaces in PHP.",
+        "How do you handle sessions in PHP?",
+        "What are traits in PHP?",
+        "How does PHP handle type hinting?"
+    ],
+    "swift": [
+        "What are optionals in Swift?",
+        "Explain the difference between struct and class in Swift.",
+        "What are protocols in Swift?",
+        "How does ARC work in Swift?",
+        "What is the difference between 'let' and 'var'?"
+    ],
+    "kotlin": [
+        "What are null safety features in Kotlin?",
+        "Explain data classes in Kotlin.",
+        "What are coroutines and how do they work?",
+        "What is the difference between 'val' and 'var'?",
+        "Explain extension functions in Kotlin."
+    ],
+    "react": [
+        "What is the Virtual DOM?",
+        "Explain the lifecycle methods of a React component.",
+        "What are Hooks in React? Name a few common ones.",
+        "What is the difference between state and props?",
+        "How do you handle forms in React?"
+    ],
+    "angular": [
+        "What is dependency injection in Angular?",
+        "Explain the component lifecycle in Angular.",
+        "What are observables and how are they used in Angular?",
+        "What is the difference between template-driven and reactive forms?",
+        "How does change detection work in Angular?"
+    ],
+    "vue": [
+        "Explain the Vue reactivity system.",
+        "What are computed properties in Vue?",
+        "What is the difference between v-if and v-show?",
+        "Explain Vue component lifecycle hooks.",
+        "What is Vuex and when would you use it?"
+    ],
+    "node": [
+        "What is the event-driven architecture in Node.js?",
+        "Explain the difference between synchronous and asynchronous programming.",
+        "How do you handle errors in Node.js?",
+        "What is middleware in Express.js?",
+        "How does the Node.js module system work?"
+    ],
+    "django": [
+        "Explain the MTV pattern in Django.",
+        "What are Django migrations?",
+        "How does Django ORM work?",
+        "What is middleware in Django?",
+        "How do you handle authentication in Django?"
+    ],
+    "flask": [
+        "What is the difference between Flask and Django?",
+        "Explain Flask blueprints.",
+        "How do you handle routing in Flask?",
+        "What is the application context in Flask?",
+        "How do you implement authentication in Flask?"
+    ],
+    "spring": [
+        "What is dependency injection in Spring?",
+        "Explain the difference between @Component, @Service, and @Repository.",
+        "What is Spring Boot and its advantages?",
+        "How does Spring MVC work?",
+        "What are Spring profiles?"
+    ],
+    "dotnet": [
+        "What is the .NET Framework vs .NET Core?",
+        "Explain the MVC pattern in ASP.NET.",
+        "What is Entity Framework?",
+        "How does dependency injection work in .NET Core?",
+        "What is middleware in ASP.NET Core?"
+    ],
+    "sql": [
+        "What is the difference between INNER JOIN and OUTER JOIN?",
+        "Explain the difference between DELETE and TRUNCATE.",
+        "What is normalization and what are its forms?",
+        "How do you optimize a SQL query?",
+        "What is an index and why is it used?"
+    ],
+    "mysql": [
+        "What is the difference between InnoDB and MyISAM?",
+        "How do you optimize MySQL queries?",
+        "Explain stored procedures in MySQL.",
+        "What are triggers in MySQL?",
+        "How does replication work in MySQL?"
+    ],
+    "postgresql": [
+        "What are the advantages of PostgreSQL over other databases?",
+        "Explain JSONB data type in PostgreSQL.",
+        "What are CTEs in PostgreSQL?",
+        "How does PostgreSQL handle concurrency?",
+        "What are window functions?"
+    ],
+    "mongodb": [
+        "What is the difference between SQL and NoSQL databases?",
+        "Explain document structure in MongoDB.",
+        "How do you handle relationships in MongoDB?",
+        "What is aggregation pipeline in MongoDB?",
+        "How does indexing work in MongoDB?"
+    ],
+    "redis": [
+        "What are the main data structures in Redis?",
+        "How would you use Redis for caching?",
+        "Explain Redis pub/sub.",
+        "What is Redis persistence?",
+        "How do you handle data expiration in Redis?"
+    ],
+    "aws": [
+        "Explain the difference between EC2 and Lambda.",
+        "What is S3 and its storage classes?",
+        "How does IAM work in AWS?",
+        "What is VPC and why is it important?",
+        "Explain the difference between RDS and DynamoDB."
+    ],
+    "azure": [
+        "What are Azure App Services?",
+        "Explain Azure Functions.",
+        "What is Azure Active Directory?",
+        "How does Azure DevOps work?",
+        "What is Azure Blob Storage?"
+    ],
+    "gcp": [
+        "What is Google Cloud Platform's advantage?",
+        "Explain Cloud Functions in GCP.",
+        "What is BigQuery and when would you use it?",
+        "How does GCP handle IAM?",
+        "What is Kubernetes Engine in GCP?"
+    ],
+    "docker": [
+        "What is the difference between a container and a virtual machine?",
+        "Explain Docker images and containers.",
+        "What is a Dockerfile?",
+        "How do you handle networking in Docker?",
+        "What is Docker Compose?"
+    ],
+    "kubernetes": [
+        "What is Kubernetes and why is it used?",
+        "Explain pods, deployments, and services.",
+        "How does Kubernetes handle scaling?",
+        "What is a ConfigMap and Secret?",
+        "How does Kubernetes networking work?"
+    ],
+    "devops": [
+        "What is CI/CD and why is it important?",
+        "Explain infrastructure as code.",
+        "What is the difference between continuous delivery and deployment?",
+        "How do you handle monitoring and logging?",
+        "What are blue-green and canary deployments?"
+    ],
+    "git": [
+        "What is the difference between git merge and git rebase?",
+        "Explain git branching strategies.",
+        "How do you resolve merge conflicts?",
+        "What is git stash and when would you use it?",
+        "Explain the difference between git fetch and git pull."
+    ],
+    "html": [
+        "What is semantic HTML?",
+        "What is the difference between a div and a span?",
+        "Explain the box model.",
+        "What are meta tags used for?",
+        "How do you ensure accessibility in HTML?"
+    ],
+    "css": [
+        "What is the difference between flexbox and grid?",
+        "Explain specificity in CSS.",
+        "What are pseudo-classes?",
+        "How do you make a website responsive?",
+        "What is the difference between absolute and relative positioning?"
+    ],
+    "data science": [
+        "Explain the data science workflow.",
+        "What is exploratory data analysis?",
+        "How do you handle imbalanced datasets?",
+        "What is feature engineering?",
+        "Explain cross-validation and its importance."
+    ],
+    "machine learning": [
+        "What is the difference between supervised and unsupervised learning?",
+        "Explain the concept of overfitting and underfitting.",
+        "What are the different types of classification algorithms?",
+        "How do you handle missing data?",
+        "What is a confusion matrix?"
+    ],
+    "deep learning": [
+        "What is the difference between CNN and RNN?",
+        "Explain backpropagation.",
+        "What are activation functions and why are they needed?",
+        "How do you prevent overfitting in neural networks?",
+        "What is transfer learning?"
+    ],
+    "artificial intelligence": [
+        "What is the difference between AI, ML, and Deep Learning?",
+        "Explain reinforcement learning.",
+        "What are large language models?",
+        "How do you evaluate AI model performance?",
+        "What are ethical considerations in AI development?"
+    ],
+    "data analysis": [
+        "What tools do you use for data analysis?",
+        "How do you clean and prepare data?",
+        "Explain your approach to finding insights in data.",
+        "What is statistical significance?",
+        "How do you present data findings to stakeholders?"
+    ],
+    "tableau": [
+        "How do you create dashboards in Tableau?",
+        "What are calculated fields in Tableau?",
+        "Explain the difference between live and extract connections.",
+        "How do you handle large datasets in Tableau?",
+        "What are Tableau actions?"
+    ],
+    "power bi": [
+        "What is DAX in Power BI?",
+        "How do you create relationships between tables?",
+        "Explain Power Query and its uses.",
+        "What are measures vs calculated columns?",
+        "How do you optimize Power BI reports?"
+    ],
+    "excel": [
+        "What advanced Excel functions do you use regularly?",
+        "Explain VLOOKUP vs INDEX-MATCH.",
+        "How do you create pivot tables?",
+        "What is VBA and how have you used it?",
+        "How do you handle large datasets in Excel?"
+    ],
+    "accounting": [
+        "Explain the accounting equation.",
+        "What is the difference between accrual and cash accounting?",
+        "How do you prepare financial statements?",
+        "What is depreciation and its methods?",
+        "Explain the concept of working capital."
+    ],
+    "finance": [
+        "What is the time value of money?",
+        "Explain NPV and IRR.",
+        "How do you perform financial forecasting?",
+        "What are the key financial ratios you analyze?",
+        "Explain the difference between equity and debt financing."
+    ],
+    "banking": [
+        "What are the types of banking products?",
+        "Explain credit risk assessment.",
+        "How does lending decision-making work?",
+        "What are regulatory compliance requirements in banking?",
+        "What is KYC and AML?"
+    ],
+    "investment": [
+        "Explain portfolio diversification.",
+        "What is fundamental vs technical analysis?",
+        "How do you assess investment risk?",
+        "What are different asset classes?",
+        "Explain the efficient market hypothesis."
+    ],
+    "auditing": [
+        "What is the audit process?",
+        "Explain the difference between internal and external audit.",
+        "What are audit sampling techniques?",
+        "How do you identify audit risks?",
+        "What are common audit findings?"
+    ],
+    "marketing": [
+        "Explain the marketing mix (4Ps).",
+        "How do you develop a marketing strategy?",
+        "What metrics do you use to measure marketing success?",
+        "How do you conduct market research?",
+        "What is brand positioning?"
+    ],
+    "digital marketing": [
+        "What is your experience with SEO?",
+        "How do you measure ROI on digital campaigns?",
+        "Explain content marketing strategy.",
+        "What is marketing automation?",
+        "How do you approach A/B testing?"
+    ],
+    "seo": [
+        "What are on-page vs off-page SEO factors?",
+        "How do you perform keyword research?",
+        "Explain link building strategies.",
+        "What tools do you use for SEO analysis?",
+        "How do you track and measure SEO success?"
+    ],
+    "social media": [
+        "How do you develop a social media strategy?",
+        "What metrics do you track for social media performance?",
+        "How do you handle negative comments or crises?",
+        "Explain your content creation process.",
+        "What platforms have you managed and what were the results?"
+    ],
+    "content": [
+        "How do you develop a content strategy?",
+        "What is your content creation process?",
+        "How do you optimize content for different platforms?",
+        "What tools do you use for content management?",
+        "How do you measure content performance?"
+    ],
+    "sales": [
+        "Describe your sales process.",
+        "How do you handle objections?",
+        "What is your approach to prospecting?",
+        "How do you build and maintain client relationships?",
+        "Describe a challenging sale you closed."
+    ],
+    "business development": [
+        "How do you identify new business opportunities?",
+        "Explain your approach to partnership development.",
+        "How do you conduct market analysis?",
+        "What strategies do you use for lead generation?",
+        "How do you measure business development success?"
+    ],
+    "account management": [
+        "How do you handle client retention?",
+        "Describe your approach to upselling and cross-selling.",
+        "How do you manage client expectations?",
+        "What is your process for handling escalations?",
+        "How do you build long-term client relationships?"
+    ],
+    "human resources": [
+        "How do you handle employee conflicts?",
+        "Explain your recruitment process.",
+        "What is your approach to performance management?",
+        "How do you ensure legal compliance in HR?",
+        "Describe your experience with HR systems."
+    ],
+    "recruitment": [
+        "How do you source candidates?",
+        "What is your screening process?",
+        "How do you ensure diversity in hiring?",
+        "Explain your interview methodology.",
+        "How do you measure recruitment success?"
+    ],
+    "training": [
+        "How do you assess training needs?",
+        "What training methods do you use?",
+        "How do you measure training effectiveness?",
+        "Explain your experience with LMS systems.",
+        "How do you design training programs?"
+    ],
+    "project management": [
+        "What project management methodologies are you familiar with?",
+        "How do you handle scope creep?",
+        "Explain your approach to stakeholder management.",
+        "How do you track project progress?",
+        "Describe a project that went off-track and how you recovered."
+    ],
+    "agile": [
+        "Explain the Agile principles.",
+        "What is the difference between Scrum and Kanban?",
+        "How do you handle sprint planning?",
+        "What is your approach to retrospectives?",
+        "How do you estimate user stories?"
+    ],
+    "scrum": [
+        "What are the Scrum ceremonies?",
+        "Explain the role of a Scrum Master.",
+        "How do you handle blocked items?",
+        "What is velocity and how do you use it?",
+        "How do you manage the product backlog?"
+    ],
+    "product management": [
+        "How do you prioritize features?",
+        "Explain your approach to product roadmaps.",
+        "How do you gather user feedback?",
+        "What metrics do you track for product success?",
+        "How do you work with engineering teams?"
+    ],
+    "ui design": [
+        "What is your design process?",
+        "How do you ensure accessibility in designs?",
+        "What tools do you use for UI design?",
+        "How do you handle design handoffs to developers?",
+        "Explain your approach to design systems."
+    ],
+    "ux design": [
+        "How do you conduct user research?",
+        "Explain your approach to usability testing.",
+        "What is your wireframing process?",
+        "How do you create user personas?",
+        "What metrics do you use to measure UX success?"
+    ],
+    "graphic design": [
+        "What design software are you proficient in?",
+        "How do you approach brand consistency?",
+        "Explain your creative process.",
+        "How do you handle design feedback?",
+        "What is your experience with print vs digital design?"
+    ],
+    "medical": [
+        "How do you stay updated with medical advancements?",
+        "Describe your approach to patient care.",
+        "How do you handle difficult patients?",
+        "What is your experience with electronic health records?",
+        "How do you ensure patient confidentiality?"
+    ],
+    "nursing": [
+        "Describe your patient assessment process.",
+        "How do you prioritize patient care?",
+        "What is your experience with different patient populations?",
+        "How do you handle emergency situations?",
+        "Describe your approach to patient education."
+    ],
+    "pharmacy": [
+        "How do you ensure medication safety?",
+        "Explain your experience with drug interactions.",
+        "How do you counsel patients on medications?",
+        "What is your approach to inventory management?",
+        "How do you handle prescription errors?"
+    ],
+    "clinical research": [
+        "Explain GCP guidelines.",
+        "What is your experience with IRB submissions?",
+        "How do you ensure data integrity in clinical trials?",
+        "What is informed consent and its importance?",
+        "How do you manage adverse event reporting?"
+    ],
+    "legal": [
+        "How do you conduct legal research?",
+        "Explain your experience with contract drafting.",
+        "How do you manage case documentation?",
+        "What is your approach to client confidentiality?",
+        "Describe your litigation experience."
+    ],
+    "compliance": [
+        "How do you stay updated on regulatory changes?",
+        "Explain your approach to compliance audits.",
+        "How do you develop compliance policies?",
+        "What is your experience with regulatory reporting?",
+        "How do you handle compliance violations?"
+    ],
+    "mechanical engineering": [
+        "Explain your experience with CAD software.",
+        "How do you approach design for manufacturing?",
+        "What is your experience with thermal analysis?",
+        "Describe a challenging engineering problem you solved.",
+        "How do you ensure design quality?"
+    ],
+    "civil engineering": [
+        "Explain your experience with structural analysis.",
+        "How do you ensure building code compliance?",
+        "What software do you use for civil engineering?",
+        "Describe your experience with project site management.",
+        "How do you handle environmental considerations?"
+    ],
+    "electrical engineering": [
+        "Explain your experience with circuit design.",
+        "What is your experience with embedded systems?",
+        "How do you approach power system analysis?",
+        "What simulation tools have you used?",
+        "Describe a complex electrical project you worked on."
+    ],
+    "chemical engineering": [
+        "Explain your experience with process design.",
+        "How do you handle safety in chemical processes?",
+        "What simulation software have you used?",
+        "Describe your experience with scale-up processes.",
+        "How do you ensure quality control?"
+    ],
+    "teaching": [
+        "What is your teaching philosophy?",
+        "How do you handle classroom management?",
+        "How do you differentiate instruction for diverse learners?",
+        "What assessment methods do you use?",
+        "How do you incorporate technology in teaching?"
+    ],
+    "education": [
+        "How do you design curriculum?",
+        "What is your approach to student engagement?",
+        "How do you measure learning outcomes?",
+        "What is your experience with educational technology?",
+        "How do you handle students with different learning needs?"
+    ],
+    "customer service": [
+        "How do you handle difficult customers?",
+        "Describe your approach to resolving complaints.",
+        "How do you ensure customer satisfaction?",
+        "What CRM systems have you used?",
+        "How do you prioritize multiple customer requests?"
+    ],
+    "support": [
+        "How do you troubleshoot technical issues?",
+        "What is your approach to ticket management?",
+        "How do you handle escalations?",
+        "Describe your experience with knowledge base management.",
+        "How do you measure support quality?"
+    ],
+    "supply chain": [
+        "How do you optimize supply chain processes?",
+        "What is your experience with demand forecasting?",
+        "How do you manage supplier relationships?",
+        "What supply chain software have you used?",
+        "How do you handle supply chain disruptions?"
+    ],
+    "logistics": [
+        "How do you optimize transportation routes?",
+        "What is your experience with warehouse management?",
+        "How do you handle inventory optimization?",
+        "What logistics software have you used?",
+        "How do you ensure on-time delivery?"
+    ],
+    "operations": [
+        "How do you improve operational efficiency?",
+        "What is your experience with process improvement?",
+        "How do you manage operations teams?",
+        "What KPIs do you track for operations?",
+        "Describe a process you optimized."
+    ],
+    "quality assurance": [
+        "What testing methodologies are you familiar with?",
+        "How do you create test plans?",
+        "What automation tools have you used?",
+        "How do you prioritize testing efforts?",
+        "Explain your defect management process."
+    ],
+    "automation testing": [
+        "What automation frameworks have you used?",
+        "How do you decide what to automate?",
+        "Explain your approach to test maintenance.",
+        "What is your experience with CI/CD integration?",
+        "How do you handle flaky tests?"
+    ],
+    "cybersecurity": [
+        "What security frameworks are you familiar with?",
+        "How do you conduct vulnerability assessments?",
+        "Explain your approach to incident response.",
+        "What is your experience with penetration testing?",
+        "How do you ensure security compliance?"
+    ],
+    "network": [
+        "Explain the OSI model.",
+        "What is your experience with network protocols?",
+        "How do you troubleshoot network issues?",
+        "What network monitoring tools have you used?",
+        "How do you ensure network security?"
+    ],
+    "system administration": [
+        "What operating systems are you proficient in?",
+        "How do you handle server provisioning?",
+        "What is your experience with automation tools?",
+        "How do you manage user access?",
+        "Describe your backup and recovery approach."
+    ],
+    "communication": [
+        "Describe a time you had to explain a complex technical concept to a non-technical person.",
+        "How do you handle constructive criticism?",
+        "Describe a situation where you had to work with a difficult team member.",
+        "How do you prioritize tasks when you have multiple deadlines?",
+        "Give an example of a time you showed leadership."
+    ],
+    "generic": [
+        "Tell me about yourself.",
+        "What is your greatest strength?",
+        "What is your greatest weakness?",
+        "Why do you want to work for this company?",
+        "Where do you see yourself in 5 years?",
+        "Describe a challenging project you worked on."
+    ],
+    "leadership": [
+        "Describe your leadership style.",
+        "How do you motivate a team during challenging times?",
+        "Tell me about a time you had to make a difficult decision.",
+        "How do you handle conflict between team members?",
+        "What is your approach to mentorship and developing talent?"
+    ],
+    "strategy": [
+        "How do you approach strategic planning for a new initiative?",
+        "Describe a time you identified a new market opportunity.",
+        "How do you align team goals with organizational strategy?",
+        "What frameworks do you use for strategic analysis?",
+        "How do you measure the success of a strategic plan?"
+    ],
+    "executive": [
+        "How do you communicate complex issues to the board or stakeholders?",
+        "What is your vision for the future of this industry?",
+        "How do you balance short-term goals with long-term vision?",
+        "Describe your experience with P&L management.",
+        "How do you build a high-performing executive team?"
+    ],
+    "consulting": [
+        "How do you manage client expectations?",
+        "Describe a challenging client engagement and how you handled it.",
+        "How do you structure a problem-solving approach?",
+        "What is your experience with change management?",
+        "How do you build trust with new clients?"
+    ],
+    "software_architecture": [
+        "How do you decide between a monolith and microservices architecture?",
+        "Explain the CAP theorem.",
+        "How do you handle technical debt?",
+        "What are the key principles of scalable system design?",
+        "Describe a complex system you designed and the trade-offs you made."
+    ],
+    "data_engineering": [
+        "What is the difference between an ETL and ELT pipeline?",
+        "How do you handle data quality issues?",
+        "Explain the concept of a data lake vs. a data warehouse.",
+        "What tools do you use for data orchestration (e.g., Airflow)?",
+        "How do you ensure data governance and compliance?"
+    ],
+    "risk_management": [
+        "How do you identify and assess potential risks?",
+        "What is your process for creating a risk mitigation plan?",
+        "How do you communicate risks to stakeholders?",
+        "Describe a time you successfully mitigated a significant risk.",
+        "What is the difference between qualitative and quantitative risk analysis?"
+    ],
+    "procurement": [
+        "How do you evaluate and select suppliers?",
+        "Describe your experience with contract negotiation.",
+        "How do you manage supplier relationships?",
+        "What strategies do you use for cost reduction?",
+        "How do you handle supply chain disruptions?"
+    ],
+    "entry_level": [
+        "What are your career goals for the next 1-2 years?",
+        "Describe a time you had to learn a new skill quickly.",
+        "How do you handle feedback?",
+        "What motivates you to work in this industry?",
+        "Describe a team project you worked on during your studies."
+    ]
+}

@@ -24,8 +24,13 @@ export const generateQuestions = async (resumeText, file) => {
                 controller.abort();
             }, 15000); // 15 second timeout
 
-            console.log("📡 Sending request to http://localhost:5000/upload...");
-            const response = await fetch('http://localhost:5000/upload', {
+            // Use relative path for production (Vercel) or localhost for development
+            const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+                ? 'http://localhost:5000/upload'
+                : '/api/upload';
+
+            console.log(`📡 Sending request to ${API_URL}...`);
+            const response = await fetch(API_URL, {
                 method: 'POST',
                 body: formData,
                 signal: controller.signal
@@ -51,7 +56,7 @@ export const generateQuestions = async (resumeText, file) => {
             // Handle structured response format
             if (data.questions && Array.isArray(data.questions)) {
                 console.log("✅ Valid questions array received:", data.questions.length, "questions");
-                
+
                 // Store additional metadata if available
                 if (data.skills || data.experience || data.questions_categorized) {
                     console.log("📊 Structured data available:");
@@ -70,7 +75,7 @@ export const generateQuestions = async (resumeText, file) => {
                         }
                     };
                 }
-                
+
                 // Return simple questions array
                 return data.questions;
             } else {

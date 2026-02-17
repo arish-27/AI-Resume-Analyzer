@@ -1,0 +1,7 @@
+{
+    "name": "ai-resume-analyzer-root",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "npm install --prefix resume-iq && npm run build --prefix resume-iq && mkdir -p public && cp -r resume-iq/dist/* public"
+    }
+}

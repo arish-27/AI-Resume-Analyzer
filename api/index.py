@@ -1,4 +1,5 @@
 import os
+import tempfile
 import json
 import logging
 import re
@@ -7,7 +8,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pdfplumber
 import docx
-import spacy
+
 from collections import Counter
 # CRITICAL: Import will be done dynamically in the function to handle both old and new packages
 from dotenv import load_dotenv
@@ -25,20 +26,16 @@ logger = logging.getLogger(__name__)
 
 # Load questions database
 try:
-    with open('questions.json', 'r') as f:
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    questions_path = os.path.join(current_dir, 'questions.json')
+    with open(questions_path, 'r') as f:
         QUESTIONS_DB = json.load(f)
 except FileNotFoundError:
     logger.error("questions.json not found!")
     QUESTIONS_DB = {}
 
-# Load NLP model
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    logger.warning("Spacy model 'en_core_web_sm' not found. Downloading...")
-    from spacy.cli import download
-    download("en_core_web_sm")
-    nlp = spacy.load("en_core_web_sm")
+# NLP model loading removed - using dictionary matching
+
 
 # Skill aliases mapping - maps variations to standard skill names
 SKILL_ALIASES = {
@@ -192,45 +189,24 @@ SKILL_ALIASES = {
 
 def extract_skills(text):
     """
-    Extract skills from text using keyword matching, aliases, and NLP.
+    Extract skills from text using keyword matching and aliases.
+    Refactored to remove Spacy dependency for lighter deployment.
     """
     text_lower = text.lower()
     found_skills = set()
     
-    # Process text with Spacy for NLP extraction
-    doc = nlp(text)
-    
-    # Extract potential skill words using NLP
-    extracted_terms = set()
-    
-    # Get noun phrases (potential skill names)
-    for chunk in doc.noun_chunks:
-        extracted_terms.add(chunk.text.lower().strip())
-    
-    # Get named entities (organizations, products that might be skills)
-    for ent in doc.ents:
-        if ent.label_ in ["ORG", "PRODUCT", "WORK_OF_ART"]:
-            extracted_terms.add(ent.text.lower().strip())
-    
-    # Get individual tokens that might be skills
-    for token in doc:
-        if token.pos_ in ["NOUN", "PROPN"] and not token.is_stop:
-            extracted_terms.add(token.text.lower().strip())
-    
-    # Add the full lowercase text for phrase matching
-    extracted_terms.add(text_lower)
-    
     # Check for direct skill matches in the questions database
     for skill in QUESTIONS_DB.keys():
         if skill != "generic" and skill != "communication":
-            # Check in full text
-            if skill in text_lower:
+            # Check in full text (simple substring match)
+            # Add padding to avoid matching substrings of other words (e.g., "go" in "google")
+            # But simple substring is often enough for unique skill names
+            pattern = r'\b' + re.escape(skill) + r'\b'
+            if re.search(pattern, text_lower):
                 found_skills.add(skill)
-            # Check in extracted terms
-            for term in extracted_terms:
-                if skill in term or term in skill:
-                    found_skills.add(skill)
-    
+            elif skill in text_lower: # Fallback for multi-word skills where word boundary might fail or be complex
+                 found_skills.add(skill)
+
     # Check for aliases
     for alias, skill in SKILL_ALIASES.items():
         # Use word boundary matching for short aliases to avoid false positives
@@ -244,10 +220,7 @@ def extract_skills(text):
                 if skill in QUESTIONS_DB:
                     found_skills.add(skill)
     
-    # Log extracted skills for debugging
-    logger.info(f"Extracted terms from NLP: {list(extracted_terms)[:20]}...")  # Log first 20
     logger.info(f"Matched skills: {list(found_skills)}")
-    
     return list(found_skills)
 
 def generate_questions_with_ai(resume_text, skills):
@@ -365,6 +338,7 @@ Return JSON in this exact structure:
         return None
 
 @app.route('/upload', methods=['POST'])
+@app.route('/api/upload', methods=['POST'])
 def upload_resume():
     """
     Upload endpoint for resume processing.
@@ -400,8 +374,9 @@ def upload_resume():
             'error': f'Unsupported file format: {file_ext}. Please upload PDF, DOCX, or TXT.'
         }), 400
     
-    # Save temporarily
-    temp_path = os.path.join("temp_resume" + file_ext)
+    # Save temporarily to /tmp (or system temp dir) to avoid read-only errors on Vercel
+    temp_dir = tempfile.gettempdir()
+    temp_path = os.path.join(temp_dir, "temp_resume" + file_ext)
     
     try:
         file.save(temp_path)
